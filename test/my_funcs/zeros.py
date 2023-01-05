@@ -21,6 +21,8 @@ factor = (1, 2, 6, 24, 120, 720, 5040, 40320, 362880,
 def zeros(n: int):
     str_num = str(factor[n - 1])
     count_zeros = 0
+    if n == 0:
+        return 0
 
     for i in range(len(str_num), 0, -1):
         if str_num[i - 1] == '0':
@@ -29,5 +31,3 @@ def zeros(n: int):
         else:
             break
     return count_zeros
-
-
